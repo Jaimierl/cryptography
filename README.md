@@ -11,3 +11,7 @@ E.g. encrypt(‘zzz’,1) would return ‘aaa’.
 We created a decrypt function that takes in encrypted text and numeric shift which will restore the encrypted text back to its original form when correct key is supplied.
 
 We created a crack function that will decode the cipher so that an encrypted message can be transformed into its original state WITHOUT access to the key. This method included a method for the computer to determine if code was broken with minimal human guidance.
+
+See if you can decipher this joke in ROT13:
+Xabpx Xabpx?
+Pbzr Va.
