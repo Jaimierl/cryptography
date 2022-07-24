@@ -5,17 +5,22 @@
 
 from .corpus_loader import word_list, name_list
 
+ceasar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
 
 def encrypt(string, shift):
     """This should be encrypting a string based on the string and a shift. Issues abound with counting out and wrapping the characters."""
     shifted = ""
-    for letter in string:
-        number = ord(letter) 
-        number += shift %26
-        # Add the shift value - remainder only
-        new = chr(number)
-        shifted += new
-        print(number)
+    listed = list(string)
+    for letter in listed:
+        if letter in ceasar:
+            number = ceasar.index(letter) 
+            new_number = (number+shift) %26
+            # Add the shift value - remainder only
+            shifted += ceasar[new_number]
+        else:
+            shifted +=letter
+        
     return shifted
 
 def decrypt(encrpyted_text, shift):
